@@ -1,0 +1,23 @@
+Milad Farazian ID:mfarazia ID#:1693852
+CSE101 Algorithms and Abstract Data Types
+Last Updated: October 10th, 2019
+------------------------------------------------------
+
+List.h ------------------ Header file for List ADT;
+			  Created using outline on pa1.pdf
+
+List.c ------------------ List ADT; Executes all required
+			  functions outlined in List.h
+
+ListClient.c ------------ Provided by Tantalo, unaltered
+
+Lex.c ------------------- Takes in argument to make a
+			  String array from infile strings
+			  and insert them into a new List,
+			  then print them into the outfile
+			  Lexographically sorted
+
+Makefile----------------- Added checksubmit and submit,
+			  Orignally provided by Tantalo
+
+README ------------------ Details files submitted for pa1
