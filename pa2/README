@@ -1,0 +1,35 @@
+//----------------------------------------------------------------------
+//
+// Programming Assignment 2: Sparse and Matrix
+// By: Milad Farazian
+// CruzID: mfarazia     ID#:1693852
+//
+//----------------------------------------------------------------------
+
+Sparse.c ----------------------- Takes in infile data, performs matrix
+				 operations, and outputs it on a new
+				 outfile
+
+Matrix.c ----------------------- Performs all Matrix operations. Was
+				 provided help from Surya(TA) on fixing
+				 changeEntry(), sum(), diff(), and product()
+
+Matrix.h ----------------------- Header file for Matrix ADT
+
+MatrixTest.c ------------------- Tests Matrix using code from failed tests
+				 from the Grading Script(provided) as well as
+				 some initial tests for diff()
+
+List.c ------------------------- Receives void pointer so that it can recieve
+				 the Entry data type into a Node.
+				 Utilized to keep track of nonzero matrix
+				 entries
+
+List.h ------------------------- Header file for List ADT
+
+ListTest.c --------------------- Tests List using Grading Script(provided)
+
+Makefile ----------------------- Provided
+
+README ------------------------- Details files submitted for PA2
+

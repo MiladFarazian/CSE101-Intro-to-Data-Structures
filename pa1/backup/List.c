@@ -11,7 +11,7 @@
 //structs --------------------------------------------------------------------------
 
 typedef struct NodeObj{
-	void* data;
+	int data;
 	struct NodeObj* next;
 	struct NodeObj* prev;
 }NodeObj;
@@ -28,8 +28,7 @@ typedef struct ListObj{
 	int index;
 }ListObj;
 
-
-Node newNode(void* data){
+Node newNode(int data){
 	Node N = malloc(sizeof(NodeObj));
 	N->data = data;
 	N->next = NULL;
@@ -39,7 +38,6 @@ Node newNode(void* data){
 
 void freeNode(Node* pN){
 	if(pN != NULL && *pN != NULL){
-		free((*pN)->data);
 		free(*pN);
 		*pN = NULL;
 	}
@@ -55,15 +53,13 @@ List newList(void){
 }
 
 void freeList(List* pL){
-	clear(*pL);
-	free(*pL);
-	//if(pL != NULL && *pL != NULL){
-//		while(length(*pL)>0){
-//			deleteFront(*pL);
-//		}
-//		free(*pL);
-//		*pL = NULL;
-//	}
+	if(pL != NULL && *pL != NULL){
+		while(length(*pL)>0){
+			deleteFront(*pL);
+		}
+		free(*pL);
+		*pL = NULL;
+	}
 }
 
 // Access Functions ---------------------------------------------------
@@ -84,7 +80,7 @@ int index(List L){
 	return(L->index);
 }
 
-void* front(List L){
+int front(List L){
 	if(L==NULL){
 		printf("List Error: calling front() on NULL List reference\n");
 		exit(1);
@@ -96,7 +92,7 @@ void* front(List L){
 	return(L->front->data);
 }
 
-void* back(List L){
+int back(List L){
 	if(L==NULL){
 		printf("List Error: calling back() on NULL List reference\n");
 		exit(1);
@@ -108,7 +104,7 @@ void* back(List L){
 	return (L->back->data);
 }
 
-void* get(List L){
+int get(List L){
 	if(L==NULL){
 		printf("List Error: calling get() on NULL List reference\n");
 		exit(1);
@@ -120,8 +116,7 @@ void* get(List L){
 	return(L->cursor->data);
 }
 
-//Taken out due to void pointer change
-/*int equals(List A, List B){
+int equals(List A, List B){
 	int eq = 0;
 	Node N = NULL;
 	Node M= NULL;
@@ -140,7 +135,7 @@ void* get(List L){
 		M = M->next;
 	}
 	return eq;
-}*/
+}
 
 // Manipulation procedures -------------------------------------------------------
 
@@ -225,7 +220,7 @@ void moveNext(List L){
 	}
 }
 
-void prepend(List L, void*  data){
+void prepend(List L, int data){
 	Node N = newNode(data);
 
    	if(L==NULL){
@@ -244,11 +239,11 @@ void prepend(List L, void*  data){
 
 }
 
-void append(List L, void* data){
+void append(List L, int data){
 	Node N = newNode(data);
 
    	if(L==NULL ){
-      	printf("List Error: calling append() on NULL List reference\n");
+      		printf("List Error: calling append() on NULL List reference\n");
       		exit(1);
    	}
    	if(length(L) == 0 ) {
@@ -261,7 +256,7 @@ void append(List L, void* data){
    	L->length++;
 }
 
-void insertBefore(List L, void* data){
+void insertBefore(List L, int data){
 	if(L==NULL ){
 		 printf("List Error: calling insertBefore() on NULL List reference\n");
      		 exit(1);
@@ -293,7 +288,7 @@ void insertBefore(List L, void* data){
 	}
 }
 
-void insertAfter(List L, void* data){
+void insertAfter(List L, int data){
 	if(L==NULL ){
 		 printf("List Error: calling insertAfter() on NULL List reference\n");
      		 exit(1);
@@ -413,8 +408,6 @@ void delete(List L){
 
 // Other operations--------------------------------------------------------------------
 
-//Taken out because of void pointer change
-/*
 void printList(FILE* out, List L){
 	Node N = NULL;
 
@@ -443,4 +436,3 @@ List copyList(List L){
 	}
 	return K;
 }
-*/

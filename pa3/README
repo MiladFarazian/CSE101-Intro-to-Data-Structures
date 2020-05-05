@@ -1,0 +1,34 @@
+//------------------------------------------------------------------------------------
+// README
+// Programming Assignment 3: BigInteger ADT
+// By: Milad Farazian
+// CruzID: mfarazia   ID#: 1693852
+//------------------------------------------------------------------------------------
+
+
+Arithmetic.c ------------------------------ Made to carry out all to desired functions
+					    A, B, A+B, A-B, A-A, 3A-2B, A^2, B^2, and
+					    9A^4+16B^5
+
+BigInteger.c ------------------------------ Performs all major functions; Recieved
+					    assistance on stringToBigInteger from
+					    Rongwen (TA); Also include addition,
+					    subtraction, and multiplication helper
+					    functions.
+
+BigInteger.h ------------------------------ Provided by Prof.
+
+BigIntegerTest.c -------------------------- Consists of Tests from the grading script
+					    that were not being passed initially
+
+List.c ------------------------------------ Updated with long data type for parameters
+					    and return type
+
+List.h ------------------------------------ Updated with long data type for parameters
+					    and return type
+
+ListTest.c -------------------------------- Tests List ADT functions updated for long
+
+README ------------------------------------ Details content included in PA3 submission
+
+Makefile ---------------------------------- Makes Arithmetic Client

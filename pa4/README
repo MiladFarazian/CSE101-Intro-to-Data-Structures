@@ -1,0 +1,23 @@
+/------------------------------------------------------|
+|  Programming Assignment 4: BFS                       |
+|  By: Milad Farazian                                  |
+|------------------------------------------------------/
+
+List.c -------------------- Original List.c from pa1, has all ADT functions
+
+List.h -------------------- Header file for List ADT
+
+Graph.c ------------------- Graph ADT, runs BFS() and has all the required
+			    functions. Assisted by: Leon(TA) on FindPath()
+
+Graph.h ------------------- Header file for Graph ADT
+
+GraphTest.c --------------- Test Graph.c functions
+
+FindPath.c ---------------- Client file for Graph ADT. Prints appropriate
+			    output. Assisted by: Spencer(TA)
+
+Makefile ------------------ Uses provided file; checksubmit and submit added
+			    as well a make GraphTest
+
+README -------------------- Details contents of pa4

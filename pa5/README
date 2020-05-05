@@ -1,0 +1,23 @@
+/*------------------------------------------------------------------|
+|   Programming Assignment 5                       		    |
+|   Find SC Components and Use Graph ADT                            |
+|   By: Milad Farazian                                              |
+|------------------------------------------------------------------*/
+
+README ------------------------------- Details contents of pa5
+
+Makefile ----------------------------- Makes FindComponents, GraphClient
+				       Altered to include submit, checksubmit
+
+List.c ------------------------------- Completes all List ADT functions
+
+List.h ------------------------------- Header file for List ADT
+
+Graph.h ------------------------------ Header file for Graph ADT
+
+Graph.c ------------------------------ Completes all Graph ADT functions
+
+GraphTest.c -------------------------- Test Graph functions DFS(), transpose(), etc.
+				       Utilizes provided GraphClient.c
+
+FindComponents.c --------------------- Client file of Graph.c

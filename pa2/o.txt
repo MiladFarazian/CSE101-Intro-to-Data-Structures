@@ -1,0 +1,157 @@
+3
+
+
+Please be warned that the following tests discard all output to stdout/stderr
+Sparse tests: If nothing between '=' signs, then test is passed
+Press enter to continue
+Sparse Test 1:
+==========
+--- outfile1.txt	2019-10-30 10:29:02.000000001 -0700
++++ model-outfile1.txt	2019-10-30 10:29:00.000000001 -0700
+@@ -16,6 +16,7 @@
+ A+B =
+ 1:(1, 2.0) (2, 2.0) (3, 4.0) 
+ 2:(1, 4.0) (2, 6.0) (3, 6.0) 
++3: (1, 8.0) (2, 9.0) (3, 10.0)
+ 
+ A+A =
+ 1:(1, 2.0) (2, 4.0) (3, 6.0) 
+@@ -25,6 +26,7 @@
+ B-A =
+ 1:(2, -2.0) (3, -2.0) 
+ 2:(1, -4.0) (2, -4.0) (3, -6.0) 
++3: (1, -6.0) (2, -7.0) (3, -8.0)
+ 
+ A-A =
+ 
+==========
+Sparse Test 2:
+==========
+--- outfile2.txt	2019-10-30 10:29:02.000000001 -0700
++++ model-outfile2.txt	2019-10-30 10:29:01.000000001 -0700
+@@ -40,6 +40,7 @@
+ 7:(1, -8517.1) (3, 2903.1) (9, -644.5) 
+ 8:(7, 1820.5) (8, -4961.3) (9, 12727.9) 
+ 9:(10, -2108.5) 
++10: (4, 9159.8)
+ 
+ A+A =
+ 1:(1, 17192.6) (4, 11660.6) 
+@@ -61,6 +62,7 @@
+ 7:(1, -8517.1) (3, 2903.1) (9, 644.5) 
+ 8:(7, -1820.5) (8, 4961.3) (9, -5398.5) 
+ 9:(10, -2108.5) 
++10: (4, 9159.8)
+ 
+ A-A =
+ 
+==========
+Sparse Test 3:
+==========
+--- outfile3.txt	2019-10-30 10:29:02.000000001 -0700
++++ model-outfile3.txt	2019-10-30 10:29:01.000000001 -0700
+@@ -75,6 +75,7 @@
+ 17:(5, -9011.6) (20, -3669.2) 
+ 18:(2, -7953.6) (6, -6203.5) (11, -334.1) (12, 8626.8) (13, 3324.5) 
+ 19:(1, 2848.7) (5, -1692.8) (7, -1429.9) (8, 4750.6) (12, -7007.8) (15, -7875.9) (16, 36.2) 
++20: (2, 2141.8) (7, -3490.5) (15, 9038.8) (16, -6639.6) (17, -1453.4) (18, 2112.4)
+ 
+ A+A =
+ 3:(3, -14866.6) (9, -14089.8) 
+@@ -115,6 +116,7 @@
+ 17:(5, 9011.6) (20, -10058.4) 
+ 18:(2, -7953.6) (6, 5423.5) (11, 334.1) (12, -9255.8) (13, 3324.5) 
+ 19:(1, -2848.7) (5, -1692.8) (7, 1429.9) (8, -4750.6) (12, -7007.8) (15, -8526.3) (16, -36.2) 
++20: (2, 2141.8) (7, 3490.5) (15, 9038.8) (16, 6639.6) (17, 1453.4) (18, -2112.4)
+ 
+ A-A =
+ 
+==========
+Sparse Test 4:
+==========
+==========
+Sparse Test 5:
+==========
+==========
+
+
+Passed 2 Sparse tests for a total of 4 / 10 points
+
+
+
+
+
+Press Enter To Continue with ListTest Results
+
+
+Test Empty_length: PASSED
+Test Append_length: PASSED
+Test Prepend_length: PASSED
+Test InsertAfter_length: PASSED
+Test InsertBefore_length: PASSED
+Test DeleteFront_length: PASSED
+Test DeleteBack_length: PASSED
+Test Delete_length: PASSED
+Test EmptyList_index: PASSED
+Test MoveFront_index: PASSED
+Test MoveBack_index: PASSED
+Test MoveNext_index: PASSED
+Test MovePrev_index: PASSED
+Test Append_index: PASSED
+Test Prepend_index: PASSED
+Test InsertAfter_index: PASSED
+Test InsertBefore_index: PASSED
+Test DeleteFront_index: PASSED
+Test DeleteBack_index: PASSED
+Test Delete_index: PASSED
+Test Empty_clear: PASSED
+Test NonEmpty_clear: PASSED
+Test Set_get: PASSED
+Test Set_front: PASSED
+Test NonEmpty_front: PASSED
+Test Set_back: PASSED
+Test NonEmpty_back: PASSED
+
+You passed 27 out of 27 tests
+
+You will receive 10 out of 10 possible points on the ListTests
+
+
+
+
+
+Press Enter To Continue with MatrixTest Results
+
+
+
+
+Test Empty_getSize: PASSED
+Test NonEmpty_getSize: PASSED
+Test Empty_getNNZ: PASSED
+Test MakeZero_getNNZ: PASSED
+Test ChangeEntry_getNNZ: PASSED
+Test Copy_getNNZ: PASSED
+Test Transpose_getNNZ: PASSED
+Test Sum_getNNZ: PASSED
+Test Diff_getNNZ: PASSED
+Test ScalarMult_getNNZ: PASSED
+Test Product_getNNZ: PASSED
+Test Empty_equals: PASSED
+Test NonEmpty_equals: FAILED: test 6
+
+You passed 12 out of 13 tests
+
+You will receive 48 out of 52 possible points on the MatrixTests
+
+
+
+gcc -c -std=c99 -Wall Sparse.c
+gcc -c -std=c99 -Wall Matrix.c
+gcc -c -std=c99 -Wall List.c
+gcc -o Sparse Sparse.o Matrix.o List.o
+
+Makefile probably correctly creates Executable!
+
+
+
+rm -f Sparse Sparse.o Matrix.o List.o

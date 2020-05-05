@@ -1,0 +1,108 @@
+3
+
+
+Please be warned that the following tests discard all output to stdout/stderr
+Sparse tests: If nothing between '=' signs, then test is passed
+Press enter to continue
+Sparse Test 1:
+==========
+diff: outfile1.txt: No such file or directory
+==========
+Sparse Test 2:
+==========
+diff: outfile2.txt: No such file or directory
+==========
+Sparse Test 3:
+==========
+diff: outfile3.txt: No such file or directory
+==========
+Sparse Test 4:
+==========
+diff: outfile4.txt: No such file or directory
+==========
+Sparse Test 5:
+==========
+diff: outfile5.txt: No such file or directory
+==========
+
+
+Passed 0 Sparse tests for a total of 0 / 10 points
+
+
+
+
+
+Press Enter To Continue with ListTest Results
+
+
+Test Empty_length: PASSED
+Test Append_length: PASSED
+Test Prepend_length: PASSED
+Test InsertAfter_length: PASSED
+Test InsertBefore_length: PASSED
+Test DeleteFront_length: PASSED
+Test DeleteBack_length: PASSED
+Test Delete_length: PASSED
+Test EmptyList_index: PASSED
+Test MoveFront_index: PASSED
+Test MoveBack_index: PASSED
+Test MoveNext_index: PASSED
+Test MovePrev_index: PASSED
+Test Append_index: PASSED
+Test Prepend_index: PASSED
+Test InsertAfter_index: PASSED
+Test InsertBefore_index: PASSED
+Test DeleteFront_index: PASSED
+Test DeleteBack_index: PASSED
+Test Delete_index: PASSED
+Test Empty_clear: PASSED
+Test NonEmpty_clear: PASSED
+Test Set_get: PASSED
+Test Set_front: PASSED
+Test NonEmpty_front: PASSED
+Test Set_back: PASSED
+Test NonEmpty_back: PASSED
+
+You passed 27 out of 27 tests
+
+You will receive 10 out of 10 possible points on the ListTests
+
+
+
+
+
+Press Enter To Continue with MatrixTest Results
+
+
+
+
+Test Empty_getSize: PASSED
+Test NonEmpty_getSize: PASSED
+Test Empty_getNNZ: PASSED
+Test MakeZero_getNNZ: PASSED
+Test ChangeEntry_getNNZ: PASSED
+Test Copy_getNNZ: PASSED
+Test Transpose_getNNZ: PASSED
+Test Sum_getNNZ: PASSED
+Test Diff_getNNZ: PASSED
+Test ScalarMult_getNNZ: PASSED
+Test Product_getNNZ: FAILED: test 2
+Test Empty_equals: PASSED
+Test NonEmpty_equals: FAILED: test 6
+
+You passed 11 out of 13 tests
+
+You will receive 44 out of 52 possible points on the MatrixTests
+
+
+
+gcc -c -std=c99 -Wall MatrixTest.c
+gcc -c -std=c99 -Wall Matrix.c
+gcc -c -std=c99 -Wall List.c
+gcc -o MatrixTest MatrixTest.o Matrix.o List.o
+
+Makefile probably doesn't correctly create Executable called "Sparse"!!!
+
+
+
+rm -f MatrixTest MatrixTest.o Matrix.o List.o
